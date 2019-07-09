@@ -3,11 +3,44 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>LalzWeb</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
 </head>
 
 <body>
 <h1>Comming soon</h1>
-  <img src="dreamcatcher.jpg" width="250px" height="500px"/>
-  <h3><em>Follow me on Facebook<em>https://www.facebook.com/ajilal.maniyoli</h3>
+ <div class="w3-content w3-display-container">
+  <img class="mySlides" src="car.jpg" style="width:100%">
+  <img class="mySlides" src="watch.jpg" style="width:100%">
+  <img class="mySlides" src="glass.jpg" style="width:100%">
+
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+  <h3>Follow me on Facebook:<a href="https://www.facebook.com/ajilal.maniyoli">Ajilal Maniyoli</a></h3>
 </body>
 </html>
